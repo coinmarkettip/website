@@ -46,6 +46,12 @@ nav.navbar {
     background: #fff;
 }
 
+@media only screen and (max-width: 979px) {
+    nav.navbar {
+		margin-top: 48px;
+	}
+}
+
 	nav.navbar a.brand {
 		border-right: 1px solid #dee0df;
 		float: left;
@@ -202,7 +208,7 @@ ul.aligned-left {
 	.go-to-top:hover {
 		color: #f8d574;
 	}
-
+	
 /* Coin list */
 .compact-name-column .currency-logo-sprite {
     margin: 4px;
@@ -219,6 +225,12 @@ ul.aligned-left {
 }
 
 /* Cool Dropdowns */
+.search-option {
+	margin-top: 5px;
+}
+.switch-page {
+	cursor: pointer;
+}
 .btn-group .dropdown-menu a{
     color:#fff;
 }
