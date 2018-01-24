@@ -210,6 +210,10 @@ ul.aligned-left {
 	}
 	
 /* Coin list */
+#results_list {
+	font-size: 12px;
+}
+
 .compact-name-column .currency-logo-sprite {
     margin: 4px;
     float: left;
