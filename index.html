@@ -66,7 +66,7 @@
 						default, primary, success, info, warning, danger
 					-->									
 					<div class="btn-group btn-group-danger search-option" id="search_market_cap_range_div">
-						<input type="hidden" value="0" id="search_market_cap_range">
+						<input type="hidden" value="0" id="search_market_cap_range" autocomplete="off">
 						
 						<button data-toggle="dropdown" class="btn btn-danger" type="button" id="search_market_cap_range_title">Any Market Cap</button>
 						<button data-toggle="dropdown" class="btn btn-danger dropdown-toggle" type="button">
@@ -85,7 +85,7 @@
 					</div>
 					
 					<div class="btn-group btn-group-warning search-option" id="search_24_volume_div">
-						<input type="hidden" value="0" id="search_24_volume">
+						<input type="hidden" value="0" id="search_24_volume" autocomplete="off">
 						
 						<button data-toggle="dropdown" class="btn btn-warning" type="button" id="search_24_volume_title">Any 24 Volume</button>
 						<button data-toggle="dropdown" class="btn btn-warning dropdown-toggle" type="button">
@@ -112,7 +112,7 @@
 					</div>
 					
 					<div class="btn-group btn-group-primary search-option" id="search_available_supply_range_div">
-						<input type="hidden" value="0" id="search_available_supply_range">
+						<input type="hidden" value="0" id="search_available_supply_range" autocomplete="off">
 						
 						<button data-toggle="dropdown" class="btn btn-primary" type="button" id="search_available_supply_range_title">Any Available Coin Supply</button>
 						<button data-toggle="dropdown" class="btn btn-primary dropdown-toggle" type="button">
@@ -137,7 +137,7 @@
 					</div>
 					
 					<div class="btn-group btn-group-success search-option" id="search_max_supply_range_div">
-						<input type="hidden" value="0" id="search_max_supply_range">
+						<input type="hidden" value="0" id="search_max_supply_range" autocomplete="off">
 						
 						<button data-toggle="dropdown" class="btn btn-success" type="button" id="search_max_supply_range_title">Any Max Coin Supply</button>
 						<button data-toggle="dropdown" class="btn btn-success dropdown-toggle" type="button">
@@ -155,7 +155,7 @@
 					</div>
 
 					<div class="btn-group btn-group-info search-option" id="search_max_unreleased_range_div">
-						<input type="hidden" value="0" id="search_max_unreleased_range">
+						<input type="hidden" value="0" id="search_max_unreleased_range" autocomplete="off">
 						
 						<button data-toggle="dropdown" class="btn btn-info" type="button" id="search_max_unreleased_range_title">Any Unreleased Coin Supply</button>
 						<button data-toggle="dropdown" class="btn btn-info dropdown-toggle" type="button">
@@ -236,7 +236,7 @@
 		<div class="row" id="results_list" style="display:none;">
 			<br />
 			<div class="table-responsive">
-				<table class="table table-striped">
+				<table class="table table-striped" id="table_results">
 					<thead>
 						<tr>
 							<th>#</th>
@@ -246,7 +246,8 @@
 							<th>Volume 24h</th>
 							<th>Available Supply</th>
 							<th>Change (1h)</th>
-							<th>Change (24h)</th>							
+							<th>Change (24h)</th>
+							<th>Change (7d)</th>							
 							<th>Events</th>
 							<th>Links</th>
 						</tr>
@@ -307,15 +308,18 @@
 
     <!-- JavaScript
     ================================================== -->        
+	<!-- Internal code -->
 	<!--
 	<script type="text/javascript" src="/js/lib/jquery-3.2.1.min.js"></script>
 	<script type="text/javascript" src="/js/lib/handlebars-4.0.11.min.js"></script>
 	<script type="text/javascript" src="/js/lib/router.js"></script>
 	<script type="text/javascript" src="/js/lib/dataManager.js"></script>
 	<script type="text/javascript" src="/js/lib/bootstrap.min.js"></script>
-    <script type="text/javascript" src="/js/lib/ie10-viewport-bug-workaround.js"></script>
+    <script type="text/javascript" src="/js/lib/ie10-viewport-bug-workaround.js"></script>	
 	-->
-	<script type="text/javascript" src="/js/lib.min.js"></script>
+	<script type="text/javascript" src="/js/lib.min.js"></script>	
+	
+	
 	
 	<!--
 	<script type="text/javascript" src="/js/controllers/homeController.js"></script>
@@ -338,8 +342,17 @@
 
 
 	
-	<!-- GA -->
-	<!-- Global site tag (gtag.js) - Google Analytics -->
+	<!-- Social share and copy link -->
+	<script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-5a6521a13fe34826"></script>
+	<script type="text/javascript">
+		$(function() {
+			addthis.init();
+		});
+	</script>
+	
+	
+	
+	<!-- Google Analytics -->
 	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-112828976-1"></script>
 	<script>
 	  window.dataLayer = window.dataLayer || [];
@@ -348,12 +361,6 @@
 
 	  gtag('config', 'UA-112828976-1');
 	</script>
-
-	
-	
-	<!-- Go to www.addthis.com/dashboard to customize your tools -->
-	<script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-5a6521a13fe34826&domready=1"></script>
-
 </body>
 
 </html>
