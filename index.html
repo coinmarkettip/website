@@ -49,13 +49,16 @@
     <div class="container">
 		<div class="row">
 			<div class="padding-template centered-template">
+				<div style="display:none;">
+					<img src="/resources/coinmarkettip-logo.png"/>
+				</div>
 				<h1 class="medium"><a href="/">Coin Market Tip</a></h1>				
 			</div>
 			
 			<div class="centered-template">
 				<form>
 					<div class="form-group">						
-						<input type="text" class="form-control" id="search_keyword" placeholder="Search by name of symbol...">
+						<input type="text" class="form-control" id="search_keyword" placeholder="Search by one or more keywords...">						
 					</div>
 				</form>
 			</div>
@@ -190,7 +193,7 @@
 		</div>
 		
 		<div class="row text-warning" id="error_message" style="display: none;">
-			Type at least two letters.
+			Each of the words above must be at least two letters long.
 		</div>
 		
 		<div class="row text-muted" id="no_results_found" style="display: none;">
@@ -204,7 +207,7 @@
 					<br /><br />
 					Total results: <strong id="results_filters_total_found_results"></strong>					
 					<br /><br />
-				</div>
+				</div>				
 				<div class="col-md-3 col-sm-6">
 					<div class="dataTables_filter">
 						<label>Order by</label>
@@ -292,10 +295,13 @@
             <br /><br />
             <ul class="list-inline social-buttons">
                 <li>
-                    <a target="_blank" href="https://www.twitter.com/coinmarkettip"><i class="fa fa-twitter"></i></a>
+                    <a target="_blank" href="https://www.twitter.com/coinmarkettip" rel="nofollow"><i class="fa fa-twitter"></i></a>
                 </li>
                 <li>
-                    <a target="_blank" href="https://www.facebook.com/coinmarkettip/"><i class="fa fa-facebook"></i></a>
+                    <a target="_blank" href="https://www.facebook.com/coinmarkettip/" rel="nofollow"><i class="fa fa-facebook"></i></a>
+                </li>
+				<li>
+                    <a target="_blank" href="https://t.me/coinmarkettip" rel="nofollow"><i class="fa fa-telegram"></i></a>
                 </li>
             </ul>
             <br />
@@ -318,8 +324,6 @@
     <script type="text/javascript" src="/js/lib/ie10-viewport-bug-workaround.js"></script>	
 	-->
 	<script type="text/javascript" src="/js/lib.min.js"></script>	
-	
-	
 	
 	<!--
 	<script type="text/javascript" src="/js/controllers/homeController.js"></script>
