@@ -203,11 +203,18 @@
 		<div class="row" id="results_filters" style="display:none;">
 			<div class="row">
 				<br />
-				<div class="col-md-6 col-sm-6">
+				<div class="col-md-3 col-sm-6">
 					<br /><br />
 					Total results: <strong id="results_filters_total_found_results"></strong>					
 					<br /><br />
-				</div>				
+				</div>
+				<div class="col-md-3 col-sm-6">					
+					<div class="dataTables_filter">
+						<label>Name</label>
+						<input type="hidden" class="form-control" id="results_filters_name_hidden" value="">
+						<input type="text" class="form-control" id="results_filters_name" value="">
+					</div>
+				</div>					
 				<div class="col-md-3 col-sm-6">
 					<div class="dataTables_filter">
 						<label>Order by</label>
@@ -236,11 +243,18 @@
 			</div>
 		</div>
 		
+		<div class="row" id="results_filter_processing" style="display:none;">
+			<div class="centered-template">				
+				<img src="/assets/images/loader.gif"/>
+				<h1>Please wait...</h1>
+			</div>
+		</div>
+		
 		<div class="row" id="results_list" style="display:none;">
 			<br />
 			<div class="table-responsive">
 				<table class="table table-striped" id="table_results">
-					<thead>
+					<thead id="table_results_thead">
 						<tr>
 							<th>#</th>
 							<th>Name</th>
@@ -257,6 +271,7 @@
 					</thead>
 					<tbody id="results_list_body"></tbody>
 				</table>
+				<div class="well" id="results_list_no_results_found">No results found.</div>
 			</div>
 		</div>
 		
@@ -315,17 +330,16 @@
     <!-- JavaScript
     ================================================== -->        
 	<!-- Internal code -->
-	<!--
 	<script type="text/javascript" src="/js/lib/jquery-3.2.1.min.js"></script>
 	<script type="text/javascript" src="/js/lib/handlebars-4.0.11.min.js"></script>
 	<script type="text/javascript" src="/js/lib/router.js"></script>
 	<script type="text/javascript" src="/js/lib/dataManager.js"></script>
 	<script type="text/javascript" src="/js/lib/bootstrap.min.js"></script>
     <script type="text/javascript" src="/js/lib/ie10-viewport-bug-workaround.js"></script>	
-	-->
-	<script type="text/javascript" src="/js/lib.min.js"></script>	
-	
 	<!--
+	<script type="text/javascript" src="/js/lib.min.js"></script>
+	-->
+	
 	<script type="text/javascript" src="/js/controllers/homeController.js"></script>
 	<script type="text/javascript" src="/js/controllers/pageController.js"></script>
 
@@ -335,9 +349,9 @@
 	<script type="text/javascript" src="/js/routes.js"></script>
 
 	<script type="text/javascript" src="/js/translations/en_UK.js"></script>
-	-->
+	<!--
 	<script type="text/javascript" src="/js/custom.min.js"></script>
-	
+	-->
 	<script type="text/javascript">
 		$(function() {
 			App.controller.homeHome();
