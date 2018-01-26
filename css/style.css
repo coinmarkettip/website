@@ -208,7 +208,23 @@ ul.aligned-left {
 	.go-to-top:hover {
 		color: #f8d574;
 	}
-	
+
+.icon-gray {
+	color: #cecece;
+}
+
+.icon-dark-gray {
+	color: #7e7e7e;
+}
+
+.icon-blue {
+	color: #57a9d9;
+}
+
+.icon-green {
+	color: #45d183;
+}
+
 /* Coin list */
 #results_list {
 	font-size: 12px;
@@ -283,6 +299,15 @@ ul.aligned-left {
 .btn-group-danger .dropdown-menu li > a:hover,
 .btn-group-danger .dropdown-menu li > a:focus {
   background-color: #d9534f !important;
+}
+
+.table {
+	margin-bottom: 0px;
+}
+
+#table_results_thead {
+	background-color: #f8d574;
+	z-index: 100;
 }
 
 /* Footer */
